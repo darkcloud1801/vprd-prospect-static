@@ -13,13 +13,13 @@
     <!-- #enddocregion css -->
     <!-- #docregion head -->
     <!-- IE required polyfills, in this exact order -->
-    <script src="node_modules/es6-shim/es6-shim.min.js"></script>
-    <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
+    <script src="../node_modules/es6-shim/es6-shim.min.js"></script>
+    <script src="../node_modules/systemjs/dist/system-polyfills.js"></script>
     <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
 
     <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
-    <script src="node_modules/systemjs/dist/system.src.js"></script>
-    <script src="node_modules/rxjs/bundles/Rx.js"></script>
+    <script src="../node_modules/systemjs/dist/system.src.js"></script>
+    <script src="../node_modules/rxjs/bundles/Rx.js"></script>
     <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
     <!-- #docregion router -->
     <script src="node_modules/angular2/bundles/router.dev.js"></script>
@@ -28,12 +28,12 @@
         (function(global) {
             var vip_packages = [
 //                { "name": "angular2-vip",          "def_ext": "ts", "map_url": "{% static "angular2-vip" %}" },
-                { "name": "heroes-app",            "def_ext": "ts", "map_url": "./heroes-app" },
-                { "name": "heroes-app/_dashboard", "def_ext": "ts", "map_url": "./heroes-app/_dashboard" },
-                { "name": "heroes-app/_detail",    "def_ext": "ts", "map_url": "./heroes-app/_detail" },
-                { "name": "heroes-app/_editor",    "def_ext": "ts", "map_url": "./heroes-app/_editor" },
-                { "name": "heroes-app/_list",      "def_ext": "ts", "map_url": "./heroes-app/_list" },
-                { "name": "heroes-app/shared",     "def_ext": "ts", "map_url": "./heroes-app/shared" },
+                { "name": "heroes",            "def_ext": "ts", "map_url": "./heroes-app" },
+                { "name": "heroes/+dashboard", "def_ext": "ts", "map_url": "./heroes-app/_dashboard" },
+                { "name": "heroes/+detail",    "def_ext": "ts", "map_url": "./heroes-app/_detail" },
+                { "name": "heroes/+editor",    "def_ext": "ts", "map_url": "./heroes-app/_editor" },
+                { "name": "heroes/+list",      "def_ext": "ts", "map_url": "./heroes-app/_list" },
+                { "name": "heroes/shared",     "def_ext": "ts", "map_url": "./heroes-app/shared" },
             ];
 
             // map tells the System loader where to look for things

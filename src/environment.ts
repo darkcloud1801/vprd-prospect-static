@@ -1,6 +1,6 @@
 /**
  * Created by rdm0509 on 7/28/16.
  */
-export const environment: Dict = {
+export const environment = {
     production: false
 };
