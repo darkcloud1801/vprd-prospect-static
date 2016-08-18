@@ -7,12 +7,12 @@
     "angular2-template-loader": "^0.4.0",
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
-    "file-loader": "^0.9.0",
+    "file-loader": "^0.8.5",
     "html-loader": "^0.4.3",
     "html-webpack-plugin": "^2.15.0",
     "jasmine-core": "^2.4.1",
-    "karma": "^1.2.0",
-    "karma-jasmine": "^1.0.2",
+    "karma": "^0.13.22",
+    "karma-jasmine": "^0.3.8",
     "karma-phantomjs-launcher": "^1.0.0",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^1.7.0",
@@ -23,16 +23,14 @@
     "style-loader": "^0.13.1",
     "ts-loader": "^0.8.1",
     "typescript": "^1.8.10",
-    "typings": "^1.0.4"
-  },
-  "dependencies": {
-    "del": "^2.2.0",
-    "path": "^0.12.7",
-    "vip": "github:darkcloud1801/vprd-infrastructure",
+    "typings": "^1.0.4",
     "webpack": "^1.13.0",
     "webpack-dev-server": "^1.14.1",
-    "webpack-merge": "^0.14.0",
-    "webpack-stream": "*"
+    "webpack-merge": "^0.14.0"
+  },
+  "dependencies": {
+    "angular2-in-memory-web-api": "*",
+    "vip": "github:darkcloud1801/vprd-infrastructure"
   },
   "scripts": {
     "tsc": "tsc",

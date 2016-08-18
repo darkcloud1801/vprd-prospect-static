@@ -7,9 +7,10 @@ import { Router } from "@angular/router";
 import { Hero, HeroService } from "../shared";
 
 @Component({
+    moduleId: module.id,
     selector: "my-dashboard",
-    templateUrl: "./dashbaord.html",
-    styleUrls: ["./dashboard.css"],
+    templateUrl: "dashboard.html",
+    styleUrls: ["dashboard.css"],
 })
 export class DashboardComponent implements OnInit {
     heroes: Hero[] = [];
