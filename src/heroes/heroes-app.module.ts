@@ -5,7 +5,10 @@
 import { NgModule }       from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
-import { HttpModule }     from '@angular/http';
+import { HttpModule, XHRBackend }     from '@angular/http';
+
+import {InMemoryBackendService, SEED_DATA} from "angular2-in-memory-web-api";
+import { InMemoryDataService } from "./shared/services/in-memory-data.service";
 
 import { HeroesAppComponent, HeroesAppRouting, HeroesListComponent, HeroService, HeroDetailComponent, DashboardComponent }   from '../heroes';
 
@@ -24,7 +27,9 @@ import { HeroesAppComponent, HeroesAppRouting, HeroesListComponent, HeroService,
         DashboardComponent
     ],
     providers: [
-        HeroService
+        HeroService,
+        { provide: XHRBackend, useClass: InMemoryBackendService },
+        { provide: SEED_DATA, useClass: InMemoryDataService }
     ],
     bootstrap: [ HeroesAppComponent ]
 })

@@ -7,7 +7,6 @@ import { ActivatedRoute, Params } from "@angular/router";
 import { HeroService, Hero } from "../shared";
 
 @Component({
-    moduleId: module.id,
     selector: "my-hero-detail",
     templateUrl: "hero-detail.html",
     styleUrls: ["hero-detail.css"]

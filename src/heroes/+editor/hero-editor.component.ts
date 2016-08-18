@@ -6,7 +6,6 @@ import { Component } from "@angular/core";
 import { Hero } from "../shared";
 
 @Component({
-    moduleId: module.id,
     selector: "my-app",
     templateUrl: "hero-editor.html"
 })

@@ -7,7 +7,6 @@ import { Router } from "@angular/router";
 import { Hero, HeroService } from "../shared";
 
 @Component({
-    moduleId: module.id,
     selector: "my-dashboard",
     templateUrl: "dashboard.html",
     styleUrls: ["dashboard.css"],
