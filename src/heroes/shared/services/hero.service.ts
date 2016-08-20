@@ -2,10 +2,9 @@
  * Created by rdm0509 on 8/15/16.
  */
 
-import { HEROES } from "../stores";
 import { Injectable } from "@angular/core";
 import { Headers, Http } from "@angular/http";
-import { Hero } from "../models";
+import { HEROES, Hero } from "../../../heroes";
 import "rxjs/add/operator/toPromise";
 
 @Injectable()
@@ -31,6 +30,13 @@ export class HeroService {
         return Promise.resolve(HEROES).then(heroes => heroes.filter(hero => hero.id === id)[0]);
     }
 
+    save(hero: Hero): Promise<Hero> {
+        if (hero.id) {
+            return this.put(hero);
+        }
+        return this.post(hero);
+    }
+
     delete(hero: Hero): Promise<any> {
         let headers: Headers = new Headers();
         headers.append("Content-Type", "javascript/json");
@@ -41,13 +47,6 @@ export class HeroService {
             .delete(url, headers)
             .toPromise()
             .catch(this.handleError);
-    }
-
-    save(hero: Hero): Promise<Hero> {
-        if (hero.id) {
-            return this.put(hero);
-        }
-        return this.post(hero);
     }
 
     private post(hero: Hero): Promise<Hero> {

@@ -12,6 +12,8 @@ import { Hero, HeroService } from "../shared";
     styleUrls: ["dashboard.css"],
 })
 export class DashboardComponent implements OnInit {
+    id: any;
+
     heroes: Hero[] = [];
 
     constructor(

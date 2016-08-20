@@ -4,3 +4,4 @@
 
 export { InMemoryDataService } from "./in-memory-data.service";
 export { HeroService } from "./hero.service";
+export { HeroSearchService } from "./hero-search.service";

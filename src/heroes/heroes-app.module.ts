@@ -7,10 +7,21 @@ import { BrowserModule }  from '@angular/platform-browser';
 import { FormsModule }    from '@angular/forms';
 import { HttpModule, XHRBackend }     from '@angular/http';
 
-import {InMemoryBackendService, SEED_DATA} from "angular2-in-memory-web-api";
-import { InMemoryDataService } from "./shared/services/in-memory-data.service";
+import { InMemoryBackendService, SEED_DATA } from "angular2-in-memory-web-api";
 
-import { HeroesAppComponent, HeroesAppRouting, HeroesListComponent, HeroService, HeroDetailComponent, DashboardComponent }   from '../heroes';
+// import { DashboardComponent, HeroDetailComponent, HeroEditorComponent, HeroesListComponent,
+//          HeroesAppRouting, HeroService, HeroSearchComponent, InMemoryDataService }   from '../heroes/index';
+
+import { HeroesAppComponent } from "./heroes-app.component";
+import { HeroesAppRouting } from "./heroes-app.routing";
+import { DashboardComponent } from "./+dashboard";
+import { HeroDetailComponent } from "./+detail";
+import { HeroEditorComponent } from "./+editor";
+import { HeroesListComponent } from "./+list";
+import { HeroSearchComponent } from "./+search";
+import { HeroService, InMemoryDataService } from "./shared/services"
+
+
 
 @NgModule({
     imports: [
@@ -18,13 +29,14 @@ import { HeroesAppComponent, HeroesAppRouting, HeroesListComponent, HeroService,
         FormsModule,
         HeroesAppRouting,
         HttpModule
-
     ],
     declarations: [
-        HeroesAppComponent,
-        HeroesListComponent,
+        DashboardComponent,
         HeroDetailComponent,
-        DashboardComponent
+        HeroEditorComponent,
+        HeroesListComponent,
+        HeroSearchComponent,
+        HeroesAppComponent
     ],
     providers: [
         HeroService,
