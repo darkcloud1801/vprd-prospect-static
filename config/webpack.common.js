@@ -11,7 +11,7 @@ module.exports = {
     entry: {
         'polyfills': './src/polyfills.ts',
         'vendor': './src/vendor.ts',
-        'app': './src/main.ts'
+        'heroes': './src/main.ts'
     },
 
     resolve: {
@@ -34,7 +34,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                loaders: ['to-string-loader', 'css-loader']
+                loaders: [ExtractTextPlugin.extract('style', 'css-loader'), 'to-string', 'css']
             }
         ]
     },
