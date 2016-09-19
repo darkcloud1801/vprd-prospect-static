@@ -3,6 +3,7 @@
  */
 
 import { Component } from "@angular/core";
+
 import "./shared/lib/rxjs-extensions";
 
 @Component({

@@ -5,13 +5,11 @@
 import { Component, OnInit} from "@angular/core";
 import { Router } from "@angular/router";
 import { Hero, HeroService } from "../shared";
-import { HeroDetailComponent } from "../+detail";
 
 @Component({
     selector: "my-heroes",
     templateUrl: "hero-list.html",
     styleUrls: ["hero-list.css"],
-    directives: [HeroDetailComponent]
 })
 
 export class HeroesListComponent implements OnInit {

@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "description": "Development setup for prospect",
+
   "devDependencies": {
     "@types/core-js": "^0.9.28",
     "@types/hammerjs": "^2.0.28",
@@ -48,27 +49,17 @@
     "webpack-dev-server": "^1.14.1",
     "webpack-merge": "^0.14.0"
   },
-  "dependencies": {
-    "path": "^0.12.7",
-    "angular2-in-memory-web-api": "*",
-    "vip": "github:darkcloud1801/vprd-infrastructure",
-    "@angular2-material/button": "^2.0.0-alpha.5",
-    "@angular2-material/input": "^2.0.0-alpha.5",
-    "@angular2-material/card": "^2.0.0-alpha.5",
-    "@angular2-material/checkbox": "^2.0.0-alpha.5",
-    "@angular2-material/core": "^2.0.0-alpha.5",
-    "@angular2-material/progress-circle": "^2.0.0-alpha.5",
-    "@angular2-material/radio": "^2.0.0-alpha.5",
-    "@angular2-material/sidenav": "^2.0.0-alpha.5",
-    "@angular2-material/toolbar": "^2.0.0-alpha.5"
 
+  "dependencies": {
+    "angular-vip-core": "1.0.1"
   },
+
   "scripts": {
     "tsc": "tsc",
     "tsc:w": "tsc -w",
-    "start": "webpack-dev-server --inline --https --progress --port 8080",
+    "start": "webpack-dev-server --inline --progress --port 8080",
     "test": "karma start",
-    "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
+    "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail --display-modules",
     "postinstall": "typings install"
   }
 }

@@ -1,6 +1,41 @@
 <h1>{{title}}</h1>
-<nav>
-    <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
-    <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
-</nav>
-<router-outlet></router-outlet>
+<vip-app-base>
+    <section links>
+        <h5>Gift Intake</h5>
+
+        <div class="divider"></div>
+        <ul >
+            <li><a class="sidenav_link" href="#">Receiving</a></li>
+            <li><a class="sidenav_link" href="#">Processing</a></li>
+            <li><a class="sidenav_link" href="#">VC4</a></li>
+        </ul>
+        <br>
+        <h5>Solicit</h5>
+
+        <div class="divider"></div>
+        <ul>
+            <li><a class="sidenav_link" href="#">Pending Matches</a></li>
+            <li><a class="sidenav_link" href="#">Review Gifts</a></li>
+            <li><a class="sidenav_link" href="#">Communicate CSU</a></li>
+        </ul>
+        <br>
+        <h5>Validation</h5>
+
+        <div class="divider"></div>
+        <ul>
+            <li><a class="sidenav_link" href="#">Multi Systems</a></li>
+            <li><a class="sidenav_link" href="#">Totals</a></li>
+            <li><a class="sidenav_link" href="#">Update Gifts</a></li>
+        </ul>
+    </section>
+    <section vip-content id="content">
+        <div id="container" class="container">
+            <nav>
+                <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
+                <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
+            </nav>
+            <router-outlet></router-outlet>        </div>
+    </section>
+</vip-app-base>
+
+

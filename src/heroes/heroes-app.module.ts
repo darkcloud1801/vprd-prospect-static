@@ -9,8 +9,7 @@ import { HttpModule, XHRBackend }     from '@angular/http';
 
 import { InMemoryBackendService, SEED_DATA } from "angular2-in-memory-web-api";
 
-// import { DashboardComponent, HeroDetailComponent, HeroEditorComponent, HeroesListComponent,
-//          HeroesAppRouting, HeroService, HeroSearchComponent, InMemoryDataService }   from '../heroes/index';
+import { VipAppModule } from "angular-vip-core";
 
 import { HeroesAppComponent } from "./heroes-app.component";
 import { HeroesAppRouting } from "./heroes-app.routing";
@@ -21,14 +20,13 @@ import { HeroesListComponent } from "./+list";
 import { HeroSearchComponent } from "./+search";
 import { HeroService, InMemoryDataService } from "./shared/services"
 
-
-
 @NgModule({
     imports: [
         BrowserModule,
         FormsModule,
         HeroesAppRouting,
-        HttpModule
+        HttpModule,
+        VipAppModule
     ],
     declarations: [
         DashboardComponent,
